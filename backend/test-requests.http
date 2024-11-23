@@ -1,0 +1,82 @@
+### CREATE five documents.
+POST http://localhost:3000/bucketList HTTP/1.1
+content-type: application/json
+
+{
+    "itemName": "Diamond Beach", 
+    "location": "Southeast Iceland", 
+    "flightHours": 6,
+}
+
+
+### CREATE 2
+POST http://localhost:3000/bucketList HTTP/1.1
+content-type: application/json
+
+{
+    "itemName": "El Ateneo", 
+    "location": "Buenos Aires, Argentina", 
+    "flightHours": 15,
+}
+
+### CREATE 3
+POST http://localhost:3000/bucketList HTTP/1.1
+content-type: application/json
+
+{
+    "itemName": "Alice in Wonderland Exhibit", 
+    "location": "Atlanta Botanical Gardens, GA, USA", 
+    "flightHours": 5,
+}
+
+### CREATE 4
+POST http://localhost:3000/bucketList HTTP/1.1
+content-type: application/json
+
+{
+    "itemName": "Reggia Di Caserta", 
+    "location": "Caserta, Italy", 
+    "flightHours": 14,
+}
+
+### CREATE 5
+POST http://localhost:3000/bucketList HTTP/1.1
+content-type: application/json
+
+{
+    "itemName": "The Weeping Stones", 
+    "location": "Okayama, Japan", 
+    "flightHours": 16,
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/bucketList HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/bucketList/6653c9f6c6868fecc7e873b6 HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/bucketList/6653c9f8c6868fecc7e873b8 HTTP/1.1
+content-type: application/json
+
+{
+    "itemName": "Diamond Beach", 
+    "location": "Southeast Iceland", 
+    "flightHours": 6,
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/bucketList/6653cc1dc6868fecc7e873e0 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/bucketList HTTP/1.1
+
