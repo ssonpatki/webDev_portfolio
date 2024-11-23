@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Siya Sonpatki</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    </head>
+<body>
+    <header>
+        <h1>Siya Sonpatki</h1>
+        <img   
+            src="apple-touch-icon.png"
+            alt="Light blue sqaure with rounded corners, with two, large, white letter S in the center"
+        />
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Contact</h2>
+            <article>
+                <p> <!-- What is this form for? --> </p>
+
+                <form action="/review" method="POST">
+
+                    <fieldset>
+                        <legend>Embark on Your Tech Adventure</legend>
+                        <p>
+                            <label for="firstLastName">First and Last Name
+                                <input
+                                    type="text"
+                                    name="firstLastName"
+                                    id="firstLastName"
+                                    required
+                                    placeholder="First and last name"
+                                    autofocus 
+                                />
+                            </label>
+                        </p>
+
+                        <p>
+                            <label for="userEmail">Email
+                                <input
+                                    type="email"
+                                    name="emailAddress"
+                                    id="userEmail"
+                                    required
+                                    pattern="[^ @]+@[^ @]+\.[a-z]+"
+                                    placeholder="Enter your email" 
+                                />
+                            </label>
+                        </p>
+
+                        <p>
+                            <label for="adventure">Choose the Path of Your Adventure
+                                <select 
+                                    name="chooseAdventure"
+                                    id="adventure"
+                                >
+                                    <option value="visitForge">Visit the Forge &#40;learn new concepts&#41;</option>
+                                    <option value="codeMaster">Master the Code &#40;programming challenges&#41;</option>
+                                    <option value="seekGuidance">Seek Guidance &#40;consulting services&#41;</option>
+                                    <option value="shareThoughts">Share your Thoughts &#40;feedback and inquiries&#41;</option>
+                                </select>
+                            </label>
+                        </p>
+
+                        <p>
+                            <label for="userFeedback">Describe Your Quest
+                                <textarea
+                                    name="userFeedback"
+                                    id="userFeedback"
+                                    minlength="5"
+                                    maxlength="150"
+                                    required
+                                    placeholder="What challenges are you hoping to conquer with our help? (under 150 words)"
+                                ></textarea>
+
+                            </label>
+                        </p>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <p> Rate Your Proximity Peril &#40;how urgent is your inquiry&#41;:
+                            <label for="not">
+                                <input type="radio" name="urgency" id="not" value="Not">
+                                    Not
+                            </label>
+
+                            <label for="average">
+                                <input type="radio" name="urgency" id="average" value="Close">
+                                    Close (average)
+                            </label>
+
+                            <label for="very">
+                                <input type="radio" name="urgency" id="very" value="Immediate">
+                                    Immediate (incredibly)
+                            </label>
+                        </p>
+
+                        <p>How would you like us to send aid?
+                            <label for="scroll">
+                                <input 
+                                    type="checkbox" 
+                                    name="scroll" 
+                                    id="scroll" 
+                                    value="email" />
+                                Classic Scroll &#40;email&#41; 
+                            </label>
+
+                            <label for="pigeons">
+                                <input 
+                                    type="checkbox" 
+                                    name="pigeons" 
+                                    id="pigeons" 
+                                    value="email" />
+                                Carrier Pigeons &#40;text message&#41; 
+                            </label>
+
+                            <label for="trumpet">
+                                <input 
+                                    type="checkbox" 
+                                    name="trumpet" 
+                                    id="trumpet" 
+                                    value="phoneCall" />
+                                The Herald's Trumpet &#40;phone call&#41; 
+                            </label>
+
+                            <label for="mirror">
+                                <input 
+                                    type="checkbox" 
+                                    name="mirror" 
+                                    id="mirror" 
+                                    value="video" />
+                                Mirror Mirror on the Wall &#40;video call&#41; 
+                            </label>
+                        </p>
+
+                        <label for="submitButton">
+                            <button 
+                                type="submit"
+                                name="submitButton"
+                                id="submitButton" 
+                                value="submitButton" 
+                            >Depart for My Adventure</button>.</label>
+                    </fieldset>
+
+                </form>
+
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2024 Siya Sonpatki
+        </p>
+    </footer>
+</body>
+</html>

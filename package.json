@@ -1,0 +1,16 @@
+{
+  "name": "a5-sonpatks-app",
+  "version": "1.0.0",
+  "description": "This is a contact page for my website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Siya Sonpatki",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13"
+  }
+}

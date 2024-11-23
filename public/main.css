@@ -1,0 +1,360 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap'); /* text-weight font */
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap'); /* heading font */
+
+/*   ----- Variables  -----  */
+:root {
+    --oregonStateMoondust: #C6DAE7;
+    --beaverOrange: #D73F09;
+    --dark-cyan-blue: #10384A;
+    --dark-blue-opaque: #064347ca; 
+    --ocean-blue: #1F505E;
+    --ocean-opaque: #1f505ec2;
+    --grey-blue: #799AAB;
+    --grey-blue-opaque: #86aaa4a0;
+    --light-grey-blue: #b4cfcb;
+    --grey-tint-white: #ecf2f7;
+    --grey-white-opaque: #d4dee3b1;
+    --dark-hunter-green: #152614;
+    --dark-hunter-opaque: #264524cc;
+    --forest-green: #22401E;
+    --forest-green-opaque: #22401eb2;
+    --green-tint-white: #e8f7e5;
+    --green-tint-opaque:#e8f7e557;
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {}. */
+    background-color: var(--dark-blue-opaque);
+    background-image: url('images/cloudy-mountainous-region-with-town.jpeg');
+    background-size: cover; /* Scale the background image to be as large as possible */
+    background-attachment: fixed; /* Make background image fixed during scrolling */
+    background-position: center; /* Center the background image */
+    color: var(--grey-blue);
+    font-family: "Playfair Display", serif; /* Define with at least one font name and its related generic family name.*/
+    margin: 2% auto;
+    padding: 0;
+    max-width: 1000px;
+    min-width: 500px;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    background-color: var(--dark-blue-opaque);
+    color: var(--grey-tint-white);
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid var(--grey-white-opaque);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header img {
+    width: auto;
+    height: 60px;
+    padding: 20px;
+  }
+  main {
+    background-color: var(--grey-white-opaque);
+    color: var(--forest-green);
+    margin: 5px;
+    padding: 20px;
+    border: 5px;
+  }
+  section {}
+  article {}
+    #topic1 {}
+    #topic2 {}
+  div {}
+  aside {}
+  footer {
+    background-color: var(--grey-blue-opaque);
+    color: var(--green-tint-white);
+    margin: 5px;
+    padding: 5px;
+    border: 2px dashed var(--grey-white-opaque);
+    text-align: center;
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    display: block;
+    margin: 2px;
+    text-align: center;
+  }
+  nav.local {
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px;
+    text-align: center;
+  }
+  nav a {
+    display: inline-block;
+    background-color: var(--forest-green-opaque);
+    color: var(--grey-tint-white);
+    text-decoration: none;
+    padding: 10px 70px;
+    margin: 2px;
+    border: 0;
+    border-radius: 5px;
+    text-align: center;
+  }
+  nav.local a {
+    display: inline-block;
+    background-color: var(--green-tint-white);
+    color: var(--dark-cyan-blue);
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 2px;
+    border: 2px solid var(--dark-cyan-blue);
+    border-radius: 5px;
+    text-align: center;
+  }
+  nav a:hover {
+    background-color: var(--green-tint-white);
+    color: var(--dark-cyan-blue);
+    border: 2px solid var(--dark-cyan-blue)
+  }
+  nav.local a:hover {
+    background-color: var(--forest-green-opaque);
+    color: var(--grey-tint-white);
+    border: 0;
+  }
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {font-family: "Bebas Neue", sans-serif;} 
+  h1 {}
+  h2 {}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    border-collapse:collapse;
+    padding: 2px;
+  }
+  caption {
+    background-color: var(--ocean-opaque); 
+    border: 2px solid var(--ocean-blue); 
+    color: var(--green-tint-white); 
+    font-weight:bold; 
+    padding:2% 0; 
+  }
+  thead {}
+  tbody {
+    text-align:center;
+    padding: 2px;
+  }
+  tfoot {}
+  tr {
+    border-bottom:1px solid var(--forest-green);
+    background-color:var(--grey-tint-white);
+    padding:1%;
+    text-align:center;
+  }
+    tr:nth-child(even) {
+      background-color:var(--light-grey-blue);
+    }
+  th {
+    background-color:var(--green-tint-white);
+    padding:1%;
+    text-align:center;
+  }
+    th:nth-child(3) {
+      text-align:right;
+    }
+  td {
+    border: 5px 10px;
+    padding: 2px 3px;
+    border-bottom:1px solid var(--green-tint-white);
+    text-align: left;
+  }
+    td:nth-child(3) {
+      text-align:right;
+    }
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form {}
+  fieldset {
+    margin: 12px 0;
+    padding: 10px;
+    background-color: var(--green-tint-opaque);
+    border: 
+  }
+    legend {
+      color: var(--grey-tint-white);
+      background-color: var(--dark-hunter-opaque);
+      border: 5px solid var(--grey-tint-white);
+      padding: 10px;
+    }
+  label {
+    display: block;
+    color: var(--dark-cyan-blue);
+    padding: 4px;
+  }
+  button {
+    color: var(--grey-tint-white);
+    background-color: var(--dark-hunter-opaque);
+    border: 2px solid var(--grey-tint-white);
+    padding: 10px;
+  }
+  input {
+    color: var(--ocean-opaque);
+    background-color: var(--grey-tint-white);
+    border: 1px solid var(--dark-blue-opaque);
+    padding: 10px;
+  }
+  select {
+    color: var(--grey-tint-white);
+    background-color: var(--ocean-blue);
+    border: 2px solid var(--grey-tint-white);
+    padding: 10px;
+  }
+    optgroup {}
+    option {}
+  textarea {
+    color: var(--dark-hunter-green);
+    background-color: var(--grey-tint-white);
+    border: 1px solid var(--dark-blue-opaque);
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  output {}
+  meter {}
+  progress {}
+  
+  
+  /* ----- Media ----- */
+  figure {}
+    figcaption {}
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0; 
+    padding: 2px;
+  }
+  .gallery figure {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 5px;
+    margin: 2px;
+    border: 3px solid var(--forest-green);
+    border-radius: 5px;
+    background-color: var(--green-tint-opaque);
+  }
+  .gallery img {
+    width: 100%; 
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .gallery figcaption {
+    display: block;
+    color: var(--forest-green);
+    padding: 2px 1px;
+    text-align: center;
+    width: 100%; 
+    
+  }
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}

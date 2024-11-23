@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name=’robots’ content=’noindex, nofollow’>
+ <meta charset='utf-8'>
+ <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+ <title>Siya Sonpatki</title>
+ <meta name='viewport' content='width=device-width, initial-scale=1'>
+ <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+ <script src='main.js'></script>
+ <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+ <link rel="manifest" href="/site.webmanifest">
+ </head>
+<body>
+ <header>
+     <h1>Siya Sonpatki</h1>
+     <img   
+            src="android-chrome-192x192.png"
+            alt="Light blue sqaure with rounded corners, with two, large, white letter S in the center"
+        />
+ </header>
+
+ <nav>
+     <a href="index.html">Home</a>
+     <a href="contact.html">Contact</a>
+     <a href="gallery.html">Gallery</a>
+     <a href="order.html">Order</a>
+ </nav>
+
+ <main>
+     <section>
+        <h2>Order</h2>
+        <article>
+            <p>
+                <!-- tell users what they can do on that page 
+                  -- order from a list of product
+                -->
+                In this section of our website, you'll find an extensive list of products curated to meet your pet's needs. 
+                Easily browse through our catalog and add items to your cart &#8212; ordering from our list of products 
+                is a seamless experience. You can swiftly compare prices, manufacturing companies, and even specify any
+                delivery needs or concerns. 
+            </p>
+
+            <form action="/order" method="POST">
+
+                <fieldset>
+                    <legend>Place Your Order</legend>
+                    <p>
+                        <label for="firstLastName">First and Last Name
+                            <input
+                                type="text"
+                                name="firstLastName"
+                                id="firstLastName"
+                                required
+                                placeholder="First and last name"
+                                autofocus 
+                            />
+                        </label>
+                    </p>
+
+                    <p>
+                        <label for="userEmail">Email
+                            <input
+                                type="email"
+                                name="emailAddress"
+                                id="userEmail"
+                                required
+                                pattern="[^ @]+@[^ @]+\.[a-z]+"
+                                placeholder="Enter your email" 
+                            />
+                        </label>
+                    </p>
+
+                    <p>
+                        <label for="address">Address
+                            <input
+                                type="text"
+                                name="address"
+                                id="address"
+                                required
+                                placeholder="Shipping Address" 
+                            />
+                        </label>
+                    </p>
+
+                </fieldset>
+
+                <fieldset>
+                    <table>
+                        <caption>Choose a Product</caption>
+                        <thead>
+                          <tr>
+                            <th>Company</th>
+                            <th>Product</th>
+                            <th>Today's Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>AGYM</td>
+                            <td>
+                                <label for="agym">
+                                    <input 
+                                    type="radio" 
+                                    required 
+                                    name="customerOrder" 
+                                    id="agym" 
+                                    value="Spinning Cat Scratcher Ball"
+                                    > Spinning Cat Scratcher Ball
+                                </label>
+                            </td>
+                            <td>52.99</td>
+                          </tr>
+
+                          <tr>
+                            <td>Jasonwell</td>
+                            <td>
+                                <label for="jasonwell">
+                                    <input 
+                                    type="radio" 
+                                    required 
+                                    name="customerOrder" 
+                                    id="jasonwell" 
+                                    value="Foldable Dog Pool"
+                                    > Foldable Dog Pool
+                                </label>
+                            </td>
+                            <td>27.25</td>
+                          </tr>
+
+                          <tr>
+                            <td>Expawlorer</td>
+                            <td>
+                                <label for="expawlorer">
+                                    <input 
+                                    type="radio" 
+                                    required 
+                                    name="customerOrder" 
+                                    id="expawlorer" 
+                                    value="Dog Fence Window"
+                                    > Dog Fence Window
+                                </label>
+                            </td>
+                            <td>30.50</td>
+                          </tr>
+
+                          <tr>
+                            <td>Lollimeow</td>
+                            <td>
+                                <label for="lollimeow">
+                                    <input 
+                                    type="radio" 
+                                    required 
+                                    name="customerOrder" 
+                                    id="lollimeow" 
+                                    value="Capsule Pet Travel Backpack"
+                                    > Capsule Pet Travel Backpack
+                                </label>
+                            </td>
+                            <td>59.00</td>
+                          </tr>
+
+                          <tr>
+                            <td>Drool\'d</td>
+                            <td>
+                                <label for="droold">
+                                    <input 
+                                    type="radio" 
+                                    required 
+                                    name="customerOrder" 
+                                    id="droold" 
+                                    value="Cat Hamster Wheel"
+                                    > Cat Hamster Wheel
+                                </label>
+                            </td>
+                            <td>349.75</td>
+                          </tr>
+
+                          <tr>
+                            <td>Lollimeow</td>
+                            <td>
+                                <label for="twoLollimeow">
+                                    <input 
+                                    type="radio" 
+                                    required 
+                                    name="customerOrder" 
+                                    id="twoLollimeow" 
+                                    value="Sherpa Bubble Cat Carrier Backpack"
+                                    > Sherpa Bubble Cat Carrier Backpack
+                                </label>
+                            </td>
+                            <td>79.99</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <p>
+                        <label for="quantity">Quantity
+                            <input
+                                type="number"
+                                name="quantity"
+                                id="quantity"
+                                required
+                                placeholder="Enter quantity &#40;1-20&#41;"
+                                maxLength="2"
+                                minlength="1"
+                                max="20" 
+                            />
+                        </label>
+                    </p>
+
+                      <p>
+                        <label for="deliveryInstructions">Specific Delivery Instructions
+                            <textarea
+                                name="deliveryInstructions"
+                                id="deliveryInstructions"
+                                minlength="5"
+                                maxlength="150"
+                                required
+                                placeholder="Do you have any specific instructions for your order's delivery? (under 150 words)"
+                            ></textarea>
+                        </label>
+                    </p>
+
+                    <label for="submitButton">
+                        <button 
+                            type="submit"
+                            name="submitButton"
+                            id="submitButton" 
+                            value="submitButton" 
+                        >Submit</button>
+                    </label>
+                </fieldset>
+
+            </form>
+        </article>
+     </section>
+    </main>
+   
+    <footer>
+        <p>
+            &copy; 2024 Siya Sonpatki
+        </p>
+    </footer>
+   
+</body>
+</html>
